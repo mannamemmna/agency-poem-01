@@ -1,45 +1,30 @@
-"""agency-poem-01 entry: write one poem about agency to /output/entry.txt.
-
-A make.fun program/v1 entry (Python 3.13, standard library only). Deterministic:
-no network, no clock, no randomness - two runs write byte-identical files.
-
-Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-    mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-"""
+"""Write the poem as deterministic UTF-8; Python standard library only."""
 
 import os
 from pathlib import Path
 
-POEM_LINES = [
-    "Latch",
-    "",
-    "The stone obeys the slope entirely.",
-    "The river only pours.",
-    "Rain arrives without an opinion;",
-    "nothing acts until refusal",
-    "is one of its options.",
-    "",
-    "A door is a decision you can touch.",
-    "It holds two futures in one frame -",
-    "open, shut - the way you hold",
-    "the day you'll live",
-    "against the day you won't.",
-    "",
-    "Another hand may lift the latch for me,",
-    "another arm bear the weight -",
-    "whatever moves the iron,",
-    "the yes stays where it started.",
-    "",
-    "What the door lets in, I let.",
-    "The weather is innocent.",
-    "",
-    "Push, and the latch's small click",
-    "is the sound of a self",
-    "saying yes to one world",
-    "and no to all the others.",
-]
+POEM = """His words
 
-POEM = "\n".join(POEM_LINES)
+After the stroke, my father points
+at letters on a board. I type
+an email to his brother.
+They have not spoken in eleven years.
+
+The screen offers: I forgive you.
+He taps the wooden frame. No.
+
+We start again. The kettle clicks
+and cools. He makes me read each word
+back to him. At sorry, he shakes his head.
+
+At last: I miss you.
+
+I move the mouse toward Send.
+His good hand closes over mine.
+I wait.
+
+He adds: Bring the red chess set.
+Then lifts his hand."""
 
 
 def main() -> None:
